@@ -2,8 +2,9 @@ const functions = {
 
     //October 11 Daily
 
-    makeEmailObj:(name) =>{
-        console.log("object.first");
+    makeEmailObj:(obj) =>{
+        //console.log("object.first");
+        return (obj.fname.toLowerCase() + "." + obj.lname.toLowerCase() + "@evolveu.ca");
     }
 
     //October 9 Daily
