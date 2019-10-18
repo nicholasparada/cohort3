@@ -1,14 +1,20 @@
 const functions = {
 
-    
-    makeEmailArr: (arr) =>{
-        console.log(arr[0]);
-        return (arr[0].toLowerCase()+"."+arr[1].toLowerCase()+"@evolveu.ca");
+    //October 11 Daily
+
+    makeEmailObj:(name) =>{
+        console.log("object.first");
+    }
+
+    //October 9 Daily
+    // makeEmailArr: (arr) =>{
+    //     console.log(arr[0]);
+    //     return (arr[0].toLowerCase()+"."+arr[1].toLowerCase()+"@evolveu.ca");
         
-        return ("first.last@evolveu.ca");
+    //     return ("first.last@evolveu.ca");
         
 
-    }
+    // }
 };
 //     // size: (num) => {
 //     //     if (num < 0)  return "negative";
