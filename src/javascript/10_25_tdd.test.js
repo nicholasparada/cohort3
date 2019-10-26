@@ -10,13 +10,13 @@
 
 */
 
-import functions from "./10_25_tdd"
+import functions from "./10_25_tdd.js"
 
 
 
 test('mytest', () => {
     console.log("hello world");
-    // functions.helloworld("Hello world from mytest!");
+    functions.helloworld("Hello world from mytest!");
 });
 
 
@@ -26,5 +26,6 @@ test('sumtest', () => {
     expect(functions.sum(2, 1)).toEqual(3);
 
 });
+
 
 
