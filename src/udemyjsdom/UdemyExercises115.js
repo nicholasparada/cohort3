@@ -18,11 +18,11 @@ var database = [
 var newsfeed = [
 	{
 		username: "mike",
-		timeline: "So much to do!"
+		timeline: "So much to do"
 	},
 	{
 		username: "bob",
-		timeline: "I like learning!"
+		timeline: "I like learning"
 	},
 	{
 		username: "joe",
