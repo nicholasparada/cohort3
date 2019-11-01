@@ -9,7 +9,7 @@ array.shift();
 array.sort();
 
 // 3. Put "Kiwi" at the end.
-array.push("Pearl");
+array.push("Kiwi");
 
 // 4. Remove "Apples".
 array.splice(0, 1);
