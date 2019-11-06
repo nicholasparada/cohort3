@@ -1,4 +1,4 @@
-import functions from './daily'
+import functions from './daily.js'
 
 //October 31 Daily
 
@@ -68,31 +68,37 @@ test("Make sort()", () => {
 //October 15 Daily 
 
 test("Next level for of loop", () => {
-  expect(functions.makeForOfLoop()).toEqual("United");
+  expect(functions.makeForOfLoop([1,2,3])).toEqual("123");
+  expect(functions.makeForOfLoop(["first","last"])).toEqual("firstlast");
 });
+
 
 test("Next Level for in loop", () => {
-  expect(functions.makeForInLoop("Age")).toEqual("Mark23Lawyer");
+  expect(functions.makeForInLoop([1,2,3])).toEqual("123");
+  expect(functions.makeForInLoop(["first","last"])).toEqual("firstlast");
 });
 
+
+//   expect(functions.makeForInLoop("Age")).toEqual("Mark23Lawyer");
+// });
+
 test("basic do while loop", () => {
-  expect(functions.makeDoWhileLoop([6])).toEqual(5);
+  expect(functions.makeDoWhileLoop([1,2,3])).toEqual("123");
+  expect(functions.makeDoWhileLoop(["first","last"])).toEqual("firstlast");
+  
 });
 
 test("basic while loop", () => {
-  expect(functions.makeBasicWhileLoop([7])).toEqual(6);
+  expect(functions.makeBasicWhileLoop([1,2,3])).toEqual("123");
+  expect(functions.makeBasicWhileLoop(["first","last"])).toEqual("firstlast");
+
 });
 
 test("basic for loop", () => {
-  expect(functions.makeBasicLoop([0, 1, 2, 3, 4, 5, 6])).toEqual([
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-  ]);
+  
+  expect(functions.makeBasicForLoop([1,2,3])).toEqual("123");
+  expect(functions.makeBasicForLoop(["first","last"])).toEqual("firstlast");
+
 });
 
 // // test('Check the sizes', () => {
@@ -136,8 +142,7 @@ test('email builder from an object / map', () => {
     Write a function to format an email based on an array.
 */
 
-//test('email builder from an array', () => {
-console.log(functions);
+test('email builder from an array', () => {
 const name = ["first", "last"];
 expect(functions.makeEmailArr(name))
   .toEqual("first.last@evolveu.ca");
@@ -145,6 +150,28 @@ expect(functions.makeEmailArr(["First", "Last"]))
   .toEqual("first.last@evolveu.ca");
 expect(functions.makeEmailArr(["Bill", "Smith"]))
   .toEqual("bill.smith@evolveu.ca");
+
+});
+
+
+
+  //October 7 Daily
+
+  test('assertEquals(p1,p2) comparing parameters', () => {
+    expect(functions.assertEquals(3,3)).toEqual(true);
+    expect(functions.assertEquals(3,4)).toEqual(false);
+    expect(functions.assertEquals("2",2)).toEqual(false);
+    expect(functions.assertEquals("a","a")).toEqual(true);
+
+
+
+  });
+
+    
+
+
+
+
 
 
 

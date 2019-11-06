@@ -112,92 +112,121 @@ const functions = {
 
     //October 15 Daily
 
-    makeForOfLoop: arr => {
-        const airLines1 = ["United", "WestJet", "AirCanada"];
-        let item;
-        for (item of airLines1) {
-            return item;
+    makeForOfLoop: (array) => {
+        let text = "";
+        let x;
+        for (x of array) {
+            text += x;
         }
+        return text;
+        
     },
 
-    makeForInLoop: obj => {
-        let person = {
-            name: "Mark",
-            Age: 23,
-            Occupation: "Lawyer"
-        };
-        let personalInfo = "";
-        let i;
-        for (i in person) {
-            personalInfo += person[i] + "";
+
+    makeForInLoop: (array) => {
+        let text = "";
+        let x;
+        for (x in array) {
+            text += array[x];
         }
-        return personalInfo;
+        return text;
     },
 
-    makeDoWhileLoop: () => {
-        let counter = 5;
+
+    makeDoWhileLoop: (array) => {
+        let text = "";
+        let i = 0
         do {
-            return counter;
-            counter++;
-        } while (counter > 0);
+            text += array[i]
+            i++;
+
+        } while (i < array.length)
+        return text;
     },
 
-    makeBasicWhileLoop: () => {
-        let nums = 6;
-        while (nums < 7) {
-            return nums;
-            nums++;
+
+    makeBasicWhileLoop: (array) => {
+        let text = "";
+        let i = 0
+        while (i < array.length) {
+            text += array[i]
+            i++;
         }
+        return text;
     },
 
-    makeBasicLoop: () => {
-        let array1 = [];
-        for (let i = 0; i <= 6; i++) {
-            array1.push(i);
+    makeBasicForLoop: (array) => {
+        let text = "";
+        for (let i = 0; i < array.length; i++) {
+            text += array[i]
+
         }
-        return array1;
+        return text; //"1 2 3 "
     },
 
     //October 11 Daily
 
-    makeEmailObj: (obj) => {
-        //console.log("object.first");
-        return (obj.fname.toLowerCase() + "." + obj.lname.toLowerCase() + "@evolveu.ca");
-    }
+    makeEmailObj: (nameObject) => {
+        let text = "";
+        text = nameObject.fname.toLowerCase() + "." + nameObject.lname.toLowerCase() + "@evolveu.ca"
+        return text;
+    },
+
 
     //October 9 Daily
-    // makeEmailArr: (arr) =>{
-    //     console.log(arr[0]);
-    //     return (arr[0].toLowerCase()+"."+arr[1].toLowerCase()+"@evolveu.ca");
 
-    //     return ("first.last@evolveu.ca");
+    makeEmailArr: (nameArray) => {
+        return nameArray[0].toLowerCase() + "." + nameArray[1].toLowerCase() + "@evolveu.ca"
+
+    },
 
 
-    // }
-    //};
-    //     // size: (num) => {
-    //     //     if (num < 0)  return "negative";
-    //     //     if (num < 10) return "small";
-    //     //     if (num < 20) return "medium";
-    //     //     return "large";
-    //     // },
 
-    //     add: (num1, num2) => {
-    //         return num1 + num2;
-    //     },
+    //October 7 Daily
 
-    //     subtract: (num1, num2) => {
-    //         return num1 - num2;
-    //     },
+    /*	
+        Write the function that will create this output:
+    
+    *** the two values are not the same:
+        p1--> a
+        p2--> b
+    *** the two values are not the same:
+        p1--> 1
+        p2--> 2
+    *** the two values are not the same:
+        p1--> 2
+        p2--> 2
+    */
 
-    //     assertEquals: (num1) => {
-    //         return `${num1} is all good`;
-    //     }
+    // Write the function after this comment ---
+    assertEquals: (p1, p2) => {
+        if (p1 === p2) {
+            return true;
+        }
+        console.log(`the two values are not the same
+        p1--> ${p1}
+        p2--> ${p2}`)
+        return false;
 
-    // };
+
+    }
+
+    // and before this comment ---
+
 
 
 };
+
+functions.assertEquals("a", "b");
+functions.assertEquals("a", "a");
+functions.assertEquals(1, 2);
+functions.assertEquals(2, 2);
+functions.assertEquals("2", 2);
+functions.assertEquals("This value", "This value");
+
+
+
+
 
 export default functions;
 
