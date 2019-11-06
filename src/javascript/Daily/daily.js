@@ -63,52 +63,51 @@ const functions = {
 
     //October 17 Daily
 
-    makeSlice: () => {
-        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-        var citrus = fruits.slice(1, 3);
-        return citrus;
+    makeSlice: (array, start, end) => {
+        return array.slice(start, end);
     },
 
-    makeSplice: () => {
-        const array = [1, 2, 3, 4, 5];
-        return array.splice(2);
+
+    makeSplice: (array, start, howmanyDelete, item) => {
+        array.splice(start, howmanyDelete, item);
+        return array;
+
     },
 
-    makeForeach: () => {
-        const array = [1, 2, 10, 17];
-        const double = [];
-        const newArray = array.forEach(num => {
-            double.push(num * 2);
+
+    makeForeach: (array) => {
+        let text = "";
+        array.forEach(element => {
+            text += element + "/";
         });
-        return double;
+        return text;
     },
 
-    makeMap: arr => {
-        const newNums = [1, 2, 10, 16];
-        const mapNums = newNums.map(num => num * 2);
-        return mapNums;
+    makeMap: (array) => {
+        return array.map(element => {
+            return element * 10;
+        });
+
     },
 
-    makeReduce: arr => {
-        var arr = [1, 2, 3, 4];
-        var sum = 0;
-        for (var i = 0; i < arr.length; i++) {
-            sum += arr[i];
-            return sum;
-        }
+    makeReduce: (array) => {
+        return array.reduce((result, element) => {
+            return result + element;
+        }, 0);
     },
 
-    makeFilter: arr => {
-        const array = [3, 6, 9];
-        const filteredArray = array.filter(num => num < 5);
-        return filteredArray;
+    makeFilter: (array) => {
+        return array.filter(element => {
+            return element >= 30;
+        });
     },
 
-    makeSort: arr => {
-        const months = ["March", "Jan", "Feb", "Dec"];
-        months.sort();
-        return months[0];
+    makeSort: (array) => {
+        return array.sort()
     },
+
+
+
 
     //October 15 Daily
 
@@ -119,7 +118,7 @@ const functions = {
             text += x;
         }
         return text;
-        
+
     },
 
 

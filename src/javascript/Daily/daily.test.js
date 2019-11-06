@@ -40,42 +40,46 @@ test("email builder for company", () => {
 //October 17 Daily
 
 test("Make slice", () => {
-  expect(functions.makeSlice()).toEqual(["Orange", "Lemon"]);
+  expect(functions.makeSlice(["a", "b", "c", "d"]), 1, 3).toEqual(["b", "c"]);
+  expect(functions.makeSlice(["audi", "porsche", "ferrari", "ford", "chevy"], 2, 4)).toEqual(["ferrari", "ford"]);
 });
 
 test("Splice", () => {
-  expect(functions.makeSplice()).toEqual([3, 4, 5]);
+  expect(functions.makeSplice(["blue", "red", "green", "grey"], 2, 1, "yellow")).toEqual(["blue", "red", "yellow", "grey"]);
+  expect(functions.makeSplice(["audi", "porsche", "ferrari", "ford", "chevy"], 3, 1, "honda")).toEqual(["audi", "porsche", "ferrari", "honda", "chevy"]);
 });
 
-test("ForEach ", () => {
-  expect(functions.makeForeach()).toEqual([2, 4, 20, 34]);
+test("ForEach method ", () => {
+  expect(functions.makeForeach(["apple", "orange", "cherry"])).toEqual("apple/orange/cherry/");
 });
+
+
 
 test("Make map()", () => {
-  expect(functions.makeMap()).toEqual([2, 4, 20, 32]);
-}),
-  test("Make reduce()", () => {
-    expect(functions.makeReduce()).toEqual(1);
-  }),
-  test("Make filter()", () => {
-    expect(functions.makeFilter()).toEqual([3]);
-  });
+  expect(functions.makeMap([1, 2, 3, 4])).toEqual([10, 20, 30, 40]);
+});
+test("Make reduce()", () => {
+  expect(functions.makeReduce([1, 2, 3, 4])).toEqual(10);
+});
+test("Make filter()", () => {
+  expect(functions.makeFilter([10, 20, 30, 40, 50])).toEqual([30, 40, 50]);
+});
 
 test("Make sort()", () => {
-  expect(functions.makeSort()).toEqual("Dec");
+  expect(functions.makeSort(["apple", "orange", "cherry"])).toEqual(["apple", "cherry", "orange"]);
 });
 
 //October 15 Daily 
 
 test("Next level for of loop", () => {
-  expect(functions.makeForOfLoop([1,2,3])).toEqual("123");
-  expect(functions.makeForOfLoop(["first","last"])).toEqual("firstlast");
+  expect(functions.makeForOfLoop([1, 2, 3])).toEqual("123");
+  expect(functions.makeForOfLoop(["first", "last"])).toEqual("firstlast");
 });
 
 
 test("Next Level for in loop", () => {
-  expect(functions.makeForInLoop([1,2,3])).toEqual("123");
-  expect(functions.makeForInLoop(["first","last"])).toEqual("firstlast");
+  expect(functions.makeForInLoop([1, 2, 3])).toEqual("123");
+  expect(functions.makeForInLoop(["first", "last"])).toEqual("firstlast");
 });
 
 
@@ -83,21 +87,21 @@ test("Next Level for in loop", () => {
 // });
 
 test("basic do while loop", () => {
-  expect(functions.makeDoWhileLoop([1,2,3])).toEqual("123");
-  expect(functions.makeDoWhileLoop(["first","last"])).toEqual("firstlast");
-  
+  expect(functions.makeDoWhileLoop([1, 2, 3])).toEqual("123");
+  expect(functions.makeDoWhileLoop(["first", "last"])).toEqual("firstlast");
+
 });
 
 test("basic while loop", () => {
-  expect(functions.makeBasicWhileLoop([1,2,3])).toEqual("123");
-  expect(functions.makeBasicWhileLoop(["first","last"])).toEqual("firstlast");
+  expect(functions.makeBasicWhileLoop([1, 2, 3])).toEqual("123");
+  expect(functions.makeBasicWhileLoop(["first", "last"])).toEqual("firstlast");
 
 });
 
 test("basic for loop", () => {
-  
-  expect(functions.makeBasicForLoop([1,2,3])).toEqual("123");
-  expect(functions.makeBasicForLoop(["first","last"])).toEqual("firstlast");
+
+  expect(functions.makeBasicForLoop([1, 2, 3])).toEqual("123");
+  expect(functions.makeBasicForLoop(["first", "last"])).toEqual("firstlast");
 
 });
 
@@ -143,31 +147,31 @@ test('email builder from an object / map', () => {
 */
 
 test('email builder from an array', () => {
-const name = ["first", "last"];
-expect(functions.makeEmailArr(name))
-  .toEqual("first.last@evolveu.ca");
-expect(functions.makeEmailArr(["First", "Last"]))
-  .toEqual("first.last@evolveu.ca");
-expect(functions.makeEmailArr(["Bill", "Smith"]))
-  .toEqual("bill.smith@evolveu.ca");
+  const name = ["first", "last"];
+  expect(functions.makeEmailArr(name))
+    .toEqual("first.last@evolveu.ca");
+  expect(functions.makeEmailArr(["First", "Last"]))
+    .toEqual("first.last@evolveu.ca");
+  expect(functions.makeEmailArr(["Bill", "Smith"]))
+    .toEqual("bill.smith@evolveu.ca");
 
 });
 
 
 
-  //October 7 Daily
+//October 7 Daily
 
-  test('assertEquals(p1,p2) comparing parameters', () => {
-    expect(functions.assertEquals(3,3)).toEqual(true);
-    expect(functions.assertEquals(3,4)).toEqual(false);
-    expect(functions.assertEquals("2",2)).toEqual(false);
-    expect(functions.assertEquals("a","a")).toEqual(true);
+test('assertEquals(p1,p2) comparing parameters', () => {
+  expect(functions.assertEquals(3, 3)).toEqual(true);
+  expect(functions.assertEquals(3, 4)).toEqual(false);
+  expect(functions.assertEquals("2", 2)).toEqual(false);
+  expect(functions.assertEquals("a", "a")).toEqual(true);
 
 
 
-  });
+});
 
-    
+
 
 
 
