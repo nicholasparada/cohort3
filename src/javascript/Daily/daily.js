@@ -12,53 +12,50 @@ const functions = {
         console.log("hello world");
     },
 
+    //October 25 Daily
+
+    // loopStaffForEach: (staffArray) => {
+    //     let emailArray = [];
+    //     let staffMember;
+    //     staffArray.forEach(functions.makeEmailObj(staffMember));
+    //     return emailArray;
+    // },
+
+
+    loopStaffMap: (staffArray) => {
+        return staffArray.map(staffMember => {
+            return functions.makeEmailObj(staffMember);
+        });
+    },
+
+    //October 24 Daily
+
+    loopStaffOf: (staffArray) => {
+        let emailArray = [];
+        let staffMember;
+        for (staffMember of staffArray) {
+            console.log(staffMember);
+            emailArray.push(functions.makeEmailObj(staffMember));
+        };
+        return emailArray;
+    },
+
+    // loopStaffIn: (staffArray) => {
+    //     let emailArray = [];
+    //     let staffMember;
+    //     for (staffMember in staffArray) {
+    //         console.log(staffMember);
+    //         emailArray.push(functions.makeEmailObj(staffMember));
+    //     };
+    //     return emailArray;
+    // },
 
     //October 22 Daily
 
-    loopStaffMap: staff => {
-        // arr[0].toLowerCase()
-        // staff[0].uperCase()
-        console.log(staff[6]);
-        let empemail = [];
-        const newStaffEm = staff.map(item => {
-            let staffEmail = functions.makeEmailObj(staff[6]);
-            empemail.push(staffEmail);
+    loopStaff: (staffArray) => {
+        return staffArray.map(staffMember => {
+            return functions.makeEmailObj(staffMember);
         });
-        return empemail;
-    },
-    loopStaffForEach: staff => {
-        console.log(staff[3]);
-        let empEmail = [];
-        const newStaff = staff.forEach(() => {
-            let staffEmail = functions.makeEmailObj(staff[3]);
-            empEmail.push(staffEmail);
-        });
-        return empEmail;
-    },
-    loopStaffOf: staff => {
-        let email = [];
-        for (const value of staff) {
-            let staffEmail = functions.makeEmailObj(value);
-            email.push(staffEmail);
-        }
-        return email;
-    },
-    loopStaffIn: staff => {
-        let email = [];
-        for (let i in staff) {
-            let staffEmail = functions.makeEmailObj(staff[i]);
-            email.push(staffEmail);
-        }
-        return email;
-    },
-
-    loopStaff: a => {
-        let email = [];
-        for (let i = 0; i < a.length; i++) {
-            let staffEmail = functions.makeEmailObj(a[i]);
-            email.push(staffEmail);
-        }
-        return email;
     },
 
     //October 17 Daily
