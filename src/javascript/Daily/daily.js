@@ -1,26 +1,27 @@
 const functions = {
 
-    //October 31 Daily
+    //October 29 Daily
 
-    //What are the 4 files we need to create to setup the framework for a TDD web app?
-    // Problem Solving Code (psc)
-    // Test code (test)
-    // HTML
-    // connector
+    totalBalances: (staffArray) => {
+        return staffArray.reduce(((accumulator, staffMem) => accumulator + staffMem.balance), 0);
+    },
 
-    helloworld: () => {
-        console.log("hello world");
+    averageBalances: (staffArray) => {
+        const total = staffArray.reduce(((accumulator, staffMem) => accumulator + staffMem.balance), 0);
+        return total / staffArray.length;
+
+
     },
 
     //October 25 Daily
 
-    // loopStaffForEach: (staffArray) => {
-    //     let emailArray = [];
-    //     let staffMember;
-    //     staffArray.forEach(functions.makeEmailObj(staffMember));
-    //     return emailArray;
-    // },
-
+    loopStaffForEach: (staffArray) => {
+        const emailArr = [];
+        staffArray.forEach((staffMem, index) => {
+            emailArr[index] = functions.makeEmailObj(staffMem);
+        })
+        return emailArr;
+    },
 
     loopStaffMap: (staffArray) => {
         return staffArray.map(staffMember => {
@@ -40,15 +41,16 @@ const functions = {
         return emailArray;
     },
 
-    // loopStaffIn: (staffArray) => {
-    //     let emailArray = [];
-    //     let staffMember;
-    //     for (staffMember in staffArray) {
-    //         console.log(staffMember);
-    //         emailArray.push(functions.makeEmailObj(staffMember));
-    //     };
-    //     return emailArray;
-    // },
+    loopStaffIn: (staffArray) => {
+        const emailArr = [];
+        let emailIndex = 0;
+        for (const staffIndex in staffArray) {
+            emailArr[emailIndex] = functions.makeEmailObj(staffArray[staffIndex]);
+            emailIndex++;
+        }
+        return emailArr;
+
+    },
 
     //October 22 Daily
 

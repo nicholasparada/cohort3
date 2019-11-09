@@ -1,32 +1,36 @@
 import functions from './daily.js'
 
-//October 31 Daily
+//October 29 Daily
 
-test('mytest', () => {
-  console.log("hello world from daily");
-  functions.helloworld();
+test('total balances()', () => {
+  expect(functions.totalBalances(data.staff)).toEqual(3823);
 });
+
+test('average balances()', () => {
+  expect(functions.averageBalances(data.staff)).toEqual(546.1428571428571);
+});
+
 
 //October 25 Daily
 
 test('email builder company for each', () => {
   const staffEmail = functions.loopStaffForEach(data.staff);
   expect(staffEmail[1])
-      .toEqual("liam.henry@evolveu.ca");
+    .toEqual("liam.henry@evolveu.ca");
   expect(staffEmail[2])
-      .toEqual("emma.jones@evolveu.ca");
+    .toEqual("emma.jones@evolveu.ca");
   expect(staffEmail[4])
-      .toEqual("noah.ho@evolveu.ca");
+    .toEqual("noah.ho@evolveu.ca");
 });
 
 test('building an email map', () => {
   const staffEmail = functions.loopStaffMap(data.staff);
   expect(staffEmail[1])
-      .toEqual("liam.henry@evolveu.ca");
+    .toEqual("liam.henry@evolveu.ca");
   expect(staffEmail[2])
-      .toEqual("emma.jones@evolveu.ca");
+    .toEqual("emma.jones@evolveu.ca");
   expect(staffEmail[4])
-      .toEqual("noah.ho@evolveu.ca");
+    .toEqual("noah.ho@evolveu.ca");
 });
 
 //October 24 Daily
@@ -34,21 +38,21 @@ test('building an email map', () => {
 test('email builder company', () => {
   const staffEmail = functions.loopStaffOf(data.staff);
   expect(staffEmail[1])
-      .toEqual("liam.henry@evolveu.ca");
+    .toEqual("liam.henry@evolveu.ca");
   expect(staffEmail[2])
-      .toEqual("emma.jones@evolveu.ca");
+    .toEqual("emma.jones@evolveu.ca");
   expect(staffEmail[4])
-      .toEqual("noah.ho@evolveu.ca");
+    .toEqual("noah.ho@evolveu.ca");
 });
 
 test('building an email', () => {
   const staffEmail = functions.loopStaffIn(data.staff);
   expect(staffEmail[1])
-      .toEqual("liam.henry@evolveu.ca");
+    .toEqual("liam.henry@evolveu.ca");
   expect(staffEmail[2])
-      .toEqual("emma.jones@evolveu.ca");
+    .toEqual("emma.jones@evolveu.ca");
   expect(staffEmail[4])
-      .toEqual("noah.ho@evolveu.ca");
+    .toEqual("noah.ho@evolveu.ca");
 });
 
 //October 22 Daily
@@ -60,13 +64,13 @@ test('building an email', () => {
 
 const data = {
   staff: [
-      { fname: "Jane", lname: "Smith", balance: 10 },
-      { fname: "Liam", lname: "Henry", balance: 1000 },
-      { fname: "Emma", lname: "Jones", balance: 1330 },
-      { fname: "Olivia", lname: "Notly", balance: 310 },
-      { fname: "Noah", lname: "Ho", balance: 503 },
-      { fname: "William", lname: "Lee", balance: 520 },
-      { fname: "Benjamin", lname: "Amis", balance: 150 },
+    { fname: "Jane", lname: "Smith", balance: 10 },
+    { fname: "Liam", lname: "Henry", balance: 1000 },
+    { fname: "Emma", lname: "Jones", balance: 1330 },
+    { fname: "Olivia", lname: "Notly", balance: 310 },
+    { fname: "Noah", lname: "Ho", balance: 503 },
+    { fname: "William", lname: "Lee", balance: 520 },
+    { fname: "Benjamin", lname: "Amis", balance: 150 },
   ],
   company: "EvolveU",
   city: "Calgary",
@@ -81,11 +85,11 @@ Write the function to build email addresses for the company.
 test('email builder for a company', () => {
   const staffEmail = functions.loopStaff(data.staff);
   expect(staffEmail[0])
-      .toEqual("jane.smith@evolveu.ca");
+    .toEqual("jane.smith@evolveu.ca");
   expect(staffEmail[3])
-      .toEqual("olivia.notly@evolveu.ca");
+    .toEqual("olivia.notly@evolveu.ca");
   expect(staffEmail[6])
-      .toEqual("benjamin.amis@evolveu.ca");
+    .toEqual("benjamin.amis@evolveu.ca");
 });
 
 //October 17 Daily
