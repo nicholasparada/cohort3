@@ -95,7 +95,7 @@ test('email builder for a company', () => {
 //October 17 Daily
 
 test("Make slice", () => {
-  expect(functions.makeSlice(["a", "b", "c", "d"]), 1, 3).toEqual(["b", "c"]);
+  // expect(functions.makeSlice(["a", "b", "c", "d"]), 1, 3).toEqual(["b", "c"]);
   expect(functions.makeSlice(["audi", "porsche", "ferrari", "ford", "chevy"], 2, 4)).toEqual(["ferrari", "ford"]);
 });
 
