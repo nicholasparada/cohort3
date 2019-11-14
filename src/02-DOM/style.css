@@ -1,29 +1,15 @@
-.test{
-    border:black solid;
+#idLeftSide{
+    border: dashed;
     float: left;
-    padding:5px;
-    margin:10px;
+    width: 45%;
 }
-
-
-.rightCards {
+#idRightSide{
     border: solid;
     float: right;
-    width: 400px;
-    height: 400px;
-    padding: 20px;
-    margin: 20px;;
-    margin-right: 30px;
-    
-    background-color: rgb(141, 145, 206);
-    text-align: center;
+    width: 45%;
 }
-
-/* .cardArea, .cardFullArea {
-    background-color: rgb(168, 206, 176);
-    float: left;
-    padding: 20px;
-    border: dashed;
-    margin-bottom: 20px;
-
-} */
+.card{
+    border: steelblue;
+    background: tan;
+    width: 50%;
+}

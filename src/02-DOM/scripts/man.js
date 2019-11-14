@@ -12,7 +12,7 @@ Btn.addEventListener("click", () => {
     console.log("Hello world from DOM");
 });
 
-idBigDiv.addEventListener("click", () => {
+idLeftSide.addEventListener("click", () => {
     console.log(event.target, event.target.getAttribute("count"));
     console.log(event.target.parentNode);
     console.log(event.target.parentNode.children);
@@ -24,7 +24,7 @@ idAdd.addEventListener("click", () => {
     console.log(event.target);
     
 //  alert('haha');
- functions.addCard(idBigDiv);
+ functions.addCard(idLeftSide);
 });
 
 // let a = document.getElementById("idAdd");
