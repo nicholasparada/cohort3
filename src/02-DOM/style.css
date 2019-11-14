@@ -1,62 +1,29 @@
-.main {
-    border:black solid 5px;
-    padding:50px;
-    margin:25px;
-}
-
-h1 {
-    font-size: 25px;
-}
-
-ol {
-    font:caption;
-    font-size: 15px;
-}
-
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 5px 18px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    justify-content: center;
-  }
-
-.panel-primary{
-    float: center;
-    width: 88%;
-    display: inline-block;
-    background: #ffffff;
-    box-shadow:0 2px 6px #000;
-    margin: 25px;
-    padding: 50px;
-}
-
-.left-panel{
+.test{
+    border:black solid;
     float: left;
-    width: 40%;
-    display: inline-block;
-    background: #ffffff;
-    box-shadow:0 2px 6px #000;
-    margin: 10px;
-    padding: 10px;
-    display:block;
+    padding:5px;
+    margin:10px;
 }
 
-.right-panel{
+
+.rightCards {
+    border: solid;
     float: right;
-    width: 40%;
-    display: inline-block;
-    background: #ffffff;
-    box-shadow:0 2px 6px #000;
-    margin: 10px;
-    padding: 10px;    
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;;
+    margin-right: 30px;
+    
+    background-color: rgb(141, 145, 206);
+    text-align: center;
 }
 
-#buttonDiv {
-    margin:auto;
-    display:block;
-}
+/* .cardArea, .cardFullArea {
+    background-color: rgb(168, 206, 176);
+    float: left;
+    padding: 20px;
+    border: dashed;
+    margin-bottom: 20px;
+
+} */
