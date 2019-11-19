@@ -1,5 +1,12 @@
 const functions = {
 
+    //Nov 6 Daily
+
+    filterBalances: (staffArray) => {
+        const richStaff = staffArray.filter(staffMem => staffMem.balance >= 1000);
+        return richStaff.map(staffMembers => staffMembers.balance);
+    },
+
     //October 29 Daily
 
     totalBalances: (staffArray) => {

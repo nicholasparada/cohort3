@@ -1,5 +1,11 @@
 import functions from './daily.js'
 
+//Nov 6 Daily
+
+test('filtering balances()', () => {
+  expect(functions.filterBalances(data.staff)).toEqual([1000,1330]);
+});
+
 //October 29 Daily
 
 test('total balances()', () => {
