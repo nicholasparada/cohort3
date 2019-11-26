@@ -1,5 +1,15 @@
 import functions from './daily.js'
 
+//Nov 26 Daily
+
+test('array destructuring()', () => {
+  expect(functions.arrayDestructor()).toEqual("Toyota Camry");
+});
+
+test('object destructuring()', () => {
+  expect(functions.objectDestructor()).toEqual("Menu 100 200");
+});
+
 //Nov 6 Daily
 
 test('filtering balances()', () => {
