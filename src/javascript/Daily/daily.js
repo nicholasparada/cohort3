@@ -4,32 +4,25 @@ const functions = {
 
     arrayDestructor: () => {
 
-        let carMaker = ["Toyota", "Camry"]
+        let carMaker = ["Toyota", "Corolla"]
         let [carName, carModel] = carMaker;
         return (carName + " " + carModel);
-
 
     },
 
     objectDestructor: () => {
+        
         let options = {
-            title: "Menu",
-            width: 100,
-            height: 200
+            title: "Magazine",
+            width: 50,
+            height: 100
         };
 
         let { title, width, height } = options;
         return (title + " " + width + " " + height);
 
-        // alert(title);  // Menu
-        // alert(width);  // 100
-        // alert(height); // 200
 
     },
-
-
-
-
 
     //Nov 6 Daily
 

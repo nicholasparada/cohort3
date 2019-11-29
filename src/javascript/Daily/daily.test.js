@@ -3,11 +3,11 @@ import functions from './daily.js'
 //Nov 26 Daily
 
 test('array destructuring()', () => {
-  expect(functions.arrayDestructor()).toEqual("Toyota Camry");
+  expect(functions.arrayDestructor()).toEqual("Toyota Corolla");
 });
 
 test('object destructuring()', () => {
-  expect(functions.objectDestructor()).toEqual("Menu 100 200");
+  expect(functions.objectDestructor()).toEqual("Magazine 50 100");
 });
 
 //Nov 6 Daily
