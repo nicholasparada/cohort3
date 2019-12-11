@@ -12,6 +12,10 @@ const functions = {
         div.setAttribute("count", functions.counter);
         div.textContent = `count ${functions.counter}`;
         div.setAttribute("class", "test");
+        div.innerHTML = `<p> Card Number ${functions.counter} </p>
+        <button id="idAddBefore">Add Before</button>
+            <button id="idAddAfter">Add After</button>
+            <button id="idDelete">Delete</button>`;
         return div;
     },
 
@@ -20,7 +24,8 @@ const functions = {
         groupCardDiv.appendChild(newChildCard);
         return;
 
-    }
+    },
+
 
 
 
